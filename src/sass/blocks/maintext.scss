@@ -2,7 +2,7 @@
     @include font (400, 2.2rem, 140%);
     color: var(--color-text);
 
-    &__roundel {
+    &--roundel {
         padding: 4rem 7rem 5rem 4rem;
         background: linear-gradient(135deg, #ffa462 0%, #b45350 21.79%, #8a2645 48.93%, #291725 84.55%);
         border-radius: 3rem;
