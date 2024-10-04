@@ -1,14 +1,179 @@
-section.content
+section.hero
+    .hero__bg
+        img(src="img/computer.jpg", alt="decor")
+        
     .container
-        h1.content__title Heading
-        .input
-            label
-                input(type="text" placeholder="Placeholder Text" class="content__input")
-                span.content__arrow
-                    img(src="img/arw2.svg", alt="Button Text")
+        h1.title почему мы не&nbsp;используем coreldraw
 
-        .content__image
-            img(src="#", alt="#")
-        h2 Привет!!!!!
-        each item in news
-            li= item.name
+section.basic
+    .container 
+        .row.basic__wrapper
+            .col-10.col-xl-12.basic__content
+                p.maintext.maintext__roundel В мире дизайна мы сделали выбор в пользу Adobe, оставив за бортом формат CorelDraw. Давайте разберем, почему именно Adobe стал нашим надежным союзником в творчестве.
+
+                ol.basic__list
+                    li.maintext.basic__list-item Adobe - это компания, представляющая широкий спектр продуктов, среди которых вы, вероятно, знакомы с основными:
+
+                        .basic__products
+                            .basic__products-wrap
+                                .basic__product
+                                    img(src="img/illustrator.png", alt="Adobe Illustrator")
+
+                                .basic__product
+                                    img(src="img/acrobat.svg", alt="Adobe Acrobat")
+
+                                .basic__product
+                                    img(src="img/premiere.png", alt="Adobe Premiere")
+
+                                .basic__product
+                                    img(src="img/photoshop.png", alt="Adobe Photoshop")
+
+                                .basic__product
+                                    img(src="img/indesign.png", alt="Adobe Indesign")
+
+                                .basic__product
+                                    img(src="img/aftereffects.png", alt="Adobe After Effect")
+
+                            p.basic__subtext а также более 90 других продуктов
+                            
+                    .basic__subblock
+                        p.maintext Более тысячи специалистов по всему миру активно участвуют в разработке и обеспечивают высокое качество продуктов и их разнообразные возможности.
+                        p.maintext В то время как CorelDraw ограничивается только CorelDraw.
+
+                    li.maintext.basic__list-mark Поддержка CorelDraw практически отсутствует в Европе и США, поскольку более 98% типографий в этих регионах не используют данный формат.
+
+                    li.maintext.basic__list-item Главный недостаток CorelDraw заключается в преобразовании документа во внутренний формат bitmap. Это особенно заметно при обработке растровых изображений, где могут возникнуть различные артефакты, такие как неожиданные грани, изменение цветов или полная инверсия изображения.
+
+                    .basic__popups
+                        .basic__popup
+                            img(src="img/popup1.jpg", alt="Произошла внутренняя ошибка фильтра")
+
+                        .basic__popup
+                            img(src="img/popup2.jpg", alt="Указанный формат данных недоступен")
+
+                    .basic__subblock.basic__subblock--offset
+                        p.maintext В отличие от этого, Illustrator лишен подобных неожиданностей и обладает полной совместимостью с форматами PDF и EPS, необходимыми для полиграфии. Важно отметить, что, несмотря на возможность сохранения файлов в формате PDF, CorelDraw плохо распознает PDF файлы, что может привести к потере некоторых элементов макета. Поэтому при подготовке макета для офсетной полиграфии Illustrator остается оптимальным выбором.
+
+                    .pdf
+                        .pdf__ai
+                            .pdf__item 
+                                img(src="img/pdfitem1.jpg", alt="PDF-страница в Иллюстраторе")
+                            
+                            .pdf__item 
+                                img(src="img/pdfitem2.jpg", alt="PDF-страница в Иллюстраторе")
+                                .pdf__circle
+                                    img(src="img/circle.png", alt="decor")
+                                    .pdf__sign
+                                        img(src="img/ai.svg", alt="Adobe Illustrator")
+
+                            .pdf__item 
+                                img(src="img/pdfitem3.jpg", alt="PDF-страница в Иллюстраторе")
+
+                        .pdf__item 
+                            img(src="img/pdfitem4.jpg", alt="PDF-страница в CorelDraw")
+                            .pdf__circle
+                                img(src="img/circle.png", alt="decor")
+                                .pdf__sign
+                                    img(src="img/cdr.svg", alt="CorelDraw")
+
+                        .pdf__circle.pdf__circle--compare
+                            img(src="img/circle.png", alt="decor")
+                            .pdf__sign
+                                img(src="img/acrobat.svg", alt="Adobe Acrobat")
+
+                    li.maintext.basic__list-item Современная лицензия CorelDraw может оцениваться в 600 долларов в год на одного пользователя, что может быть финансово недоступным для многих типографий. Из-за этого они вынуждены использовать устаревшие версии программы, что может привести к искаженному отображению контента.
+
+                    li.maintext.basic__list-item Обучение наших дизайнеров работе в CorelDraw требовало бы значительного времени. Учитывая, что это формат с тенденцией к упадку, вкладывание человеческого капитала в него становится неоправданно.
+
+            aside.col-2.col-xl-12.rightmenu
+                .rightmenu__field
+                    img(src="img/rightmenu1-bg.jpg", alt="Почему мы не используем CorelDraw")
+                    a(href="#").rightmenu__link#whynotcdr Почему мы не используем 
+                        span CorelDraw
+                        .rightmenu__arrow
+
+                .rightmenu__field
+                    img(src="img/rightmenu2-bg.jpg", alt="в команде Creat работают только лучшие")
+                    a(href="#").rightmenu__link#beststaff в команде Creat работают
+                        span только лучшие
+                        .rightmenu__arrow
+
+                .rightmenu__field
+                    img(src="img/rightmenu3-bg.jpg", alt="откуда мы черпаем идеи для дизайна")
+                    a(href="#").rightmenu__link#solutions откуда мы черпаем идеи
+                        span для дизайна
+                        .rightmenu__arrow
+
+                .rightmenu__field
+                    img(src="img/rightmenu2-bg.jpg", alt="в команде Creat работают только лучшие")
+                    a(href="#").rightmenu__link#beststaff2 в команде Creat работают
+                        span только лучшие
+                        .rightmenu__arrow
+
+        p.maintext.basic__last ​​Используя среду Adobe, мы вкладываемся в инновации, качество и признание в мировом масштабе. Присоединяйтесь к нам в этом увлекательном путешествии в мир творчества, где каждый проект становится настоящим произведением искусства.
+
+section.slider
+    .swiper.mySwiper
+        .swiper-wrapper
+            .swiper-slide.slider__slide
+                img(src="img/slider1_1.jpg", alt="image01")
+                
+            .swiper-slide.slider__slide
+                img(src="img/slider1_2.jpg", alt="image02")
+
+            .swiper-slide.slider__slide
+                img(src="img/slider1_3.jpg", alt="image03")
+
+            .swiper-slide.slider__slide
+                img(src="img/slider1_4.jpg", alt="image04")
+                
+            .swiper-slide.slider__slide
+                img(src="img/slider1_5.jpg", alt="image05")
+
+            .swiper-slide.slider__slide
+                img(src="img/slider1_1.jpg", alt="image06")
+                
+            .swiper-slide.slider__slide
+                img(src="img/slider1_2.jpg", alt="image07")
+
+            .swiper-slide.slider__slide
+                img(src="img/slider1_3.jpg", alt="image08")
+
+            .swiper-slide.slider__slide
+                img(src="img/slider1_4.jpg", alt="image09")
+                
+            .swiper-slide.slider__slide
+                img(src="img/slider1_5.jpg", alt="image10")
+
+    .swiper.mySwiper2
+        .swiper-wrapper
+            .swiper-slide.slider__slide
+                img(src="img/slider2_1.jpg", alt="image01")
+                
+            .swiper-slide.slider__slide
+                img(src="img/slider2_2.jpg", alt="image02")
+
+            .swiper-slide.slider__slide
+                img(src="img/slider2_3.jpg", alt="image03")
+
+            .swiper-slide.slider__slide
+                img(src="img/slider2_4.jpg", alt="image04")
+                
+            .swiper-slide.slider__slide
+                img(src="img/slider2_5.jpg", alt="image05")
+                
+            .swiper-slide.slider__slide
+                img(src="img/slider2_1.jpg", alt="image06")
+                
+            .swiper-slide.slider__slide
+                img(src="img/slider2_2.jpg", alt="image07")
+
+            .swiper-slide.slider__slide
+                img(src="img/slider2_3.jpg", alt="image08")
+
+            .swiper-slide.slider__slide
+                img(src="img/slider2_4.jpg", alt="image09")
+                
+            .swiper-slide.slider__slide
+                img(src="img/slider2_5.jpg", alt="image10")
+

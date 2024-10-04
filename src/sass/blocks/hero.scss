@@ -1,0 +1,38 @@
+.hero {
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 100%;
+        height: 65rem;
+        background: linear-gradient(118deg, #df5017 0%, #7a3827 15%, #512f2d 27%, #382931 40%, #292634 50%, #292634 100%);
+        z-index: -2;
+
+        & img {
+            display: block;
+            object-fit: cover;
+            width: 107rem;
+            height: 65rem;
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
+
+    &__bg-top {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 65%;
+        height: 65rem;
+        background: linear-gradient(154deg, rgba(223, 80, 23, 1) 0%, rgba(122, 56, 39, 1) 20.69%, rgba(81, 47, 45, 1) 38.69%, rgba(56, 41, 49, 0.85) 58.19%, rgba(41, 38, 52, 0.5) 74.19%, rgba(41, 38, 52, 0.1) 85%, rgba(41, 38, 52, 0) 100%);
+    }
+
+    @include for-laptop-desktop-xl {
+        &__bg img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,128 @@
+.header {
+    background: linear-gradient(132deg, #9e0b37 0%, #ffc531 71.98%, #9e0b37 100%);
+    width: 100%;
+    height: 8rem;
+    display: grid;
+    align-content: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 100;
+
+    &__wrapper {
+        @include vert-c;
+    }
+
+    &__host {
+        @include font (500, 1.6rem, 140%);
+        color: var(--color-text);
+        position: relative;
+        display: block;
+    }
+
+    &__host--roundel {
+        border-radius: 4rem;
+        padding: 1.7rem 2.5rem;
+        box-shadow: inset 0.4rem 0.4rem 0.6rem 0 rgba(255, 255, 255, 0.5), 0.4rem 0.4rem 2rem 0 rgba(223, 80, 23, 0.8);
+        background: rgba(158, 11, 55, 0.7);
+    }
+
+    &__item {
+        @include font-nav (400, 1.6rem, 140%);
+        color: var(--color-text);
+        display: block;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 7.2rem;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+    }
+
+    &__nav .header__host {
+        margin-right: 8.9rem;
+    }
+
+    &__nav .header__host::after {
+        content: '';
+        background-image: url('../img/arrow.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+
+        top: .5rem;
+        right: -2rem;
+        width: .6rem;
+        height: 1.4rem;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &__reg {
+        display: flex;
+        align-items: center;
+    }
+
+    &__reg .header__host:not(:last-child) {
+        margin-right: 4.2rem;
+    }
+
+    &__burger {
+        display: none;
+        width: 4rem;
+        height: 2rem;
+        margin-bottom: 1rem;
+        cursor: pointer;
+    }
+
+    @include for-tablet-portrait-md {
+
+        &__reg {
+            display: none;
+        }
+
+        &__burger {
+            display: block;
+            margin-right: 0;
+            margin-left: auto;
+        }
+    }
+
+    @include for-phone-landscape-sm {
+        &__item:not(:last-child) {
+            margin-right: 0;
+        }
+
+        &__nav .header__host {
+            margin-right: 0;
+        }
+
+        &__wrapper {
+            justify-content: space-between;
+        }
+
+        &__nav {
+            width: 80%;
+            margin-right: 0;
+            justify-content: space-between;
+        }
+    }
+
+    @media (max-width: 30em) {
+        &__nav {
+            display: none;
+        }
+
+        &__item:not(:last-child) {
+            margin-right: 0;
+        }
+    }
+}

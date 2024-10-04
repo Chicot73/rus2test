@@ -2,7 +2,8 @@
 
 @mixin make-max-width-container($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
     margin: 0 auto;
-    max-width: 126rem;
+    width: 100%;
+    max-width: 144rem;
     padding-left: $grid-gap-side;
     padding-right: $grid-gap-side;
 

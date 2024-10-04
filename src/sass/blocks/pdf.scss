@@ -1,0 +1,136 @@
+.pdf {
+    @include vert-c;
+    margin-bottom: 8rem;
+    width: 118rem;
+    position: relative;
+    margin-left: -12rem;
+
+    &__ai {
+        display: flex;
+    }
+
+    &__item {
+        width: 100%;
+        max-width: 24.6rem;
+        position: relative;
+        flex-shrink: 0;
+
+        & img {
+            border-radius: 1rem;
+        }
+    }
+
+    &__ai .pdf__item {
+        margin-right: 1.8rem;
+    }
+
+    &__circle {
+        transform: translate(-50%, 0);
+        left: 50%;
+        top: -8.8rem;
+        border-radius: 50%;
+        width: 9.7rem;
+        height: 9.7rem;
+        position: absolute;
+        box-shadow: 1rem 1rem 2rem 0 rgba(0, 0, 0, 0.8);
+
+        & img {
+            width: 110%;
+            height: 110%;
+            object-fit: fill;
+        }
+    }
+
+    &__circle--compare {
+        position: absolute;
+        top: -15.7rem;
+        left: 61%;
+        transform: translate(-50%, 0);
+    }
+
+    &__circle--compare::before {
+        content: '';
+        background-image: url('../img/arrow-long.svg');
+        background-repeat: no-repeat;
+        width: 13.7rem;
+        height: 4.7rem;
+        position: absolute;
+        top: 50%;
+        left: -15.4rem;
+        transform: scaleX(-1);
+    }
+
+    &__circle--compare::after {
+        content: '';
+        background-image: url('../img/arrow-long.svg');
+        background-repeat: no-repeat;
+        width: 13.7rem;
+        height: 4.7rem;
+        position: absolute;
+        top: 50%;
+        right: -15.4rem;
+    }
+
+    &__sign {
+        width: 5.3rem;
+        height: 5.4rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+    @include for-laptop-desktop-xl {
+
+        width: 98rem;
+        display: block;
+
+        &__ai .pdf__item {
+            margin-right: auto;
+        }
+
+        &__item {
+            max-width: 21.6rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__ai {
+            margin-bottom: 14rem;
+        }
+
+        &__circle--compare {
+            display: none;
+        }
+    }
+
+    @include for-tablet-landscape-lg {
+        width: auto;
+    }
+
+    @include for-tablet-portrait-md {
+        margin-top: 14rem;
+        margin-left: -8rem;
+
+        &__item {
+            max-width: 14rem;
+        }
+    }
+
+    @media (max-width: 30em) {
+        &__ai {
+            display: block;
+        }
+
+        &__item {
+            max-width: 21.6rem;
+            margin-bottom: 2rem;
+        }
+
+        .pdf__ai .pdf__item:nth-child(2) .pdf__circle {
+            top: -42rem;
+        }
+    }
+
+}

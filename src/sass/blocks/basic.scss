@@ -1,0 +1,265 @@
+.basic {
+    background: #171422;
+    margin-top: 26.5rem;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+
+    &__list {
+        list-style-type: none;
+        counter-reset: num;
+        margin-left: 12rem;
+    }
+
+    &__list-item {
+        position: relative;
+        margin-bottom: 8rem;
+    }
+
+    &__list-mark {
+        position: relative;
+        margin-bottom: 8rem;
+    }
+
+    &__list-item:last-child {
+        margin-bottom: 13rem;
+    }
+
+    &__list-item:before {
+        content: counter(num);
+        counter-increment: num;
+        display: inline-block;
+        position: absolute;
+        top: -3.2rem;
+        left: -12rem;
+        width: 11.7rem;
+        @include font (700, 18.3rem, 110%);
+        text-transform: uppercase;
+        background: linear-gradient(136deg, #8a2645 0%, #291725 67.05%, #171422 98.91%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__list-mark:before {
+        content: counter(num);
+        counter-increment: num;
+        display: inline-block;
+        position: absolute;
+        top: -7.4rem;
+        left: -12rem;
+        width: 11.7rem;
+        @include font (700, 18.3rem, 110%);
+        text-transform: uppercase;
+        background: linear-gradient(136deg, #8a2645 0%, #291725 67.05%, #171422 98.91%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__products {
+        margin-bottom: 4rem;
+        padding-right: 17.5rem;
+        margin-top: 4.1rem;
+    }
+
+    &__products-wrap {
+        display: grid;
+        gap: 2rem 4.1rem;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-template-rows: 6.2rem;
+        margin-bottom: 2rem;
+    }
+
+    &__product {
+        padding-top: .6rem;
+        height: 6.2rem;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        background: #ffffff;
+        box-shadow: 0.4rem 0.4rem 1rem 0 rgba(0, 0, 0, 0.25);
+        border-radius: 1.2rem;
+    }
+
+    &__subtext {
+        @include font (400, 1.8rem, 140%);
+        text-align: right;
+        color: var(--color-text);
+    }
+
+    &__popups {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 4.5rem;
+        padding-right: 17%;
+    }
+
+    &__popup {
+        width: 100%;
+        max-width: 25.5rem;
+        transform: rotate(7deg);
+        flex-shrink: 0;
+
+        & img {
+            width: 100%;
+            object-fit: contain;
+            border-radius: 0.5rem;
+        }
+    }
+
+    &__popup:first-child {
+        padding-bottom: 3.5rem;
+        transform: rotate(-7deg);
+        margin-right: 9rem;
+    }
+
+    &__subblock {
+        margin-bottom: 8rem;
+        margin-left: -12rem;
+    }
+
+    &__subblock--offset {
+        margin-bottom: 18.2rem;
+    }
+
+    &__subblock .maintext:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    @include for-laptop-desktop-xl {
+        aside {
+            order: -1;
+            display: grid;
+            gap: 2rem 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            grid-template-rows: 26.2rem;
+            margin-bottom: 2rem;
+            margin-bottom: 4rem;
+        }
+    }
+
+    @include for-tablet-landscape-lg {
+        padding-top: 1.5rem;
+    }
+
+    @include for-tablet-portrait-md {
+        &__list {
+            margin-left: 8rem;
+        }
+
+        &__list-item:before {
+            left: -11rem;
+            text-align: center;
+            @include font (700, 14.3rem, 110%);
+        }
+
+        &__list-mark:before {
+            top: -3.2rem;
+            left: -11rem;
+            text-align: center;
+            @include font (700, 14.3rem, 110%);
+        }
+
+        &__popups {
+            display: block;
+            margin-bottom: 4.5rem;
+            padding-right: 0%;
+        }
+
+        &__popup:last-child {
+            margin-left: 13.5rem;
+        }
+
+        &__subblock {
+            margin-bottom: 8rem;
+            margin-left: -8rem;
+        }
+    }
+
+    @include for-phone-landscape-sm {
+        &__list {
+            margin-left: 8rem;
+        }
+
+        &__list-item:before {
+            top: -2.2rem;
+            left: -10rem;
+            @include font (700, 10rem, 110%);
+        }
+
+        &__list-mark:before {
+            top: -2.2rem;
+            left: -10rem;
+            @include font (700, 10rem, 110%);
+        }
+
+        &__subblock {
+            margin-left: -5rem;
+        }
+
+        &__products {
+            width: 30rem;
+            margin-bottom: 4rem;
+            padding-right: 0;
+            margin-top: 4.1rem;
+        }
+
+        &__popups {
+            margin-left: -3rem;
+        }
+
+        &__popup:last-child {
+            margin-left: 7.5rem;
+        }
+    }
+
+    @media (max-width: 30em) {
+        padding-top: 4.5rem;
+
+        &__products {
+            width: 23rem;
+        }
+
+        &__popups {
+            width: 25rem;
+            margin-left: -3.5rem;
+        }
+
+        &__popup:first-child {
+            margin-right: 0;
+        }
+
+        &__popup:last-child {
+            margin-left: 0;
+        }
+
+        aside {
+            display: block;
+        }
+
+        &__subblock {
+            margin-left: -5rem;
+        }
+
+        &__last {
+            margin-left: 3rem;
+        }
+    }
+}
+
+li.maintext.basic__list-item::before:nth-child(2) {
+    content: counter(num);
+    counter-increment: num;
+    display: inline-block;
+    position: absolute;
+    top: -7.4rem;
+    left: -12rem;
+    width: 11.7rem;
+    @include font (700, 18.3rem, 110%);
+    text-transform: uppercase;
+    background: linear-gradient(136deg, #8a2645 0%, #291725 67.05%, #171422 98.91%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

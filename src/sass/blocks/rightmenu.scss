@@ -1,0 +1,105 @@
+.rightmenu {
+    &__field {
+        position: relative;
+
+        & img {
+            border-radius: 1.4rem;
+        }
+    }
+
+    &__field:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    &__link {
+        display: block;
+        width: 93%;
+        border: 0.1rem solid #fff;
+        border-radius: 2.4rem;
+        @include font (700, 0.9rem, 115%);
+        text-align: center;
+        color: var(--color-text);
+        padding: .4rem 4.5rem .2rem 2rem;
+        position: absolute;
+        bottom: 1.9rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-right: auto;
+        margin-left: auto;
+
+        & span {
+            display: block;
+            text-align: center;
+            @include font (700, 1.3rem, 140%);
+            color: var(--color-text);
+        }
+    }
+
+    &__arrow {
+        border-radius: 50%;
+        width: 3.6rem;
+        height: 3.6rem;
+        background-image: url('../img/arrov.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        box-shadow: 0.2rem 0.2rem 1rem 0 #df5017;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+
+        &::after {
+            content: '';
+            background-image: url('../img/arrow2.svg');
+            background-repeat: no-repeat;
+            width: 1.5rem;
+            height: .4rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    @include for-laptop-desktop-xl {
+        &__field:not(:last-child) {
+            margin-bottom: 0;
+        }
+    }
+
+    @media (max-width: 30em) {
+        padding-left: 4rem;
+        padding-right: 4rem;
+
+        &__field:not(:last-child) {
+            margin-bottom: 4rem;
+        }
+
+        &__link {
+            @include font (700, 1.2rem, 115%);
+            padding: .8rem 4.5rem .6rem 2rem;
+
+            & span {
+                @include font (700, 1.6rem, 140%);
+            }
+        }
+
+        &__arrow {
+            width: 4.9rem;
+            height: 4.9rem;
+
+            &::after {
+                content: '';
+                background-image: url('../img/arrow2.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 2.5rem;
+                height: 1.6rem;
+                position: absolute;
+                top: 2.8rem;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}

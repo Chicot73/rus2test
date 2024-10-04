@@ -1,27 +1,29 @@
 header.header
     .container
-        .row
-            .col-4.col-xxl-4.col-sm-12.col-xs-12.lll Водка
-            .col-8.col-xxl-8.col-sm-12.col-xs-12.lll Блок и рог
-            .col-4.col-xxl-4.col-sm-12.col-xs-12.lll Водка
-            .col-8.col-xxl-8.col-sm-12.col-xs-12.lll Блок и рог
-            .col-4.col-xxl-4.col-sm-12.col-xs-12.lll Водка
-            .col-8.col-xxl-8.col-sm-12.col-xs-12.lll Блок и рог
-            .col-4.col-xxl-4.col-sm-12.col-xs-12.lll Водка
-            .col-8.col-xxl-8.col-sm-12.col-xs-12.lll Блок и рог
-            .col-4.col-xxl-4.col-sm-12.col-xs-12.lll Водка
-            .col-8.col-xxl-8.col-sm-12.col-xs-12.lll Блок и рог
-            .col-4.col-xxl-4.col-sm-12.col-xs-12.lll Водка
-            .col-8.col-xxl-8.col-sm-12.col-xs-12.lll Блок и рог
-            .col-4.col-xxl-4.col-sm-12.col-xs-12.lll Водка
-            .col-8.col-xxl-8.col-sm-12.col-xs-12.lll Блок и рог
-            .col-4.col-xxl-4.col-sm-12.col-xs-12.lll Водка
-            .col-8.col-xxl-8.col-sm-12.col-xs-12.lll Блок и рог
-            .col-4.col-xxl-4.col-sm-12.col-xs-12.lll Водка
-            .col-8.col-xxl-8.col-sm-12.col-xs-12.lll Блок и рог
-            .col-4.col-xxl-4.col-sm-12.col-xs-12.lll Водка
-            .col-8.col-xxl-8.col-sm-12.col-xs-12.lll Блок и рог
-            .col-4.col-xxl-4.col-sm-12.col-xs-12.lll Водка
-            .col-8.col-xxl-8.col-sm-12.col-xs-12.lll Блок и рог
-            .col-4.col-xxl-4.col-sm-12.col-xs-12.lll Водка
-            .col-8.col-xxl-8.col-sm-12.col-xs-12.lll Блок и рог
+        nav.header__wrapper
+            .header__nav
+                a(href="#").header__host Направления 
+                a(href="#").header__item Портфолио 
+                a(href="#").header__item Контакты 
+
+            .header__reg
+                a(href="#").header__host Войти
+                a(href="#").header__host.header__host--roundel Регистрация
+
+            .header__burger
+                img(src="img/burger.svg", alt="burger-меню")
+
+    section.burger-menu
+        .burger-menu__cross
+            img(src="img/cross.svg", alt="burger-меню")
+        .container
+            nav.burger-menu__wrapper
+                .burger-menu__nav
+                    a(href="#").burger-menu__host Направления 
+                    a(href="#").burger-menu__item Портфолио 
+                    a(href="#").burger-menu__item Контакты 
+
+                .burger-menu__reg
+                    a(href="#").burger-menu__host Войти
+                    a(href="#").burger-menu__host.burger-menu__host--roundel Регистрация
+

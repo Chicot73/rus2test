@@ -1,0 +1,17 @@
+.title {
+    @include font(500, 5rem, 120%);
+    color: var(--color-header);
+    margin-top: 26.3rem;
+    width: 100%;
+    max-width: 82rem;
+    text-transform: uppercase;
+
+    @include for-phone-landscape-sm {
+        @include font(500, 4.4rem, 120%);
+    }
+
+    @media (max-width: 30em) {
+        @include font(500, 3.4rem, 120%);
+        text-align: center;
+    }
+}
